@@ -1,0 +1,36 @@
+.header-container {
+	background-color: #BCDCF3;
+	max-height: 250px;
+}
+
+.footer-container {
+	height: 2em;
+	background-color: #1D4C7C;
+}
+
+.header-logo {
+	margin-left: 1em;	
+}
+
+.header-logo img {
+	height: 100%	;
+	width: 100%;
+	margin-top: .7em;
+}
+
+.nav-container {
+	background-color: #4D97CC;
+	border-top: 1px solid white;
+}
+
+.nav-item a {
+	font-family: 'Nunito', sans-serif;
+}
+
+.nav-icon {
+	height: 2px;
+	width: 25px;
+	background-color: white;
+	display: block;
+	margin: 5px 0;
+}

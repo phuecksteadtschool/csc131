@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/css.css" type="text/css">
+    <script src="js/jpgraph.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>AEIS</title>
+  </head>
+  <body>
+    <div class="header-container container">
+      <div class="header-logo row">
+        <div class="col-3">
+          <img class="img-fluid" style="max-width: 90px; height: auto; max-height: 80px;" src="img/header_ca.gov.png" alt="CA.gov"/>
+        </div>
+        <div class="col-9">
+          <img class="img-fluid" style="max-width: 465px; height: auto; max-height: 80px;" src="img/DGS_Header_Logo.png" alt="Department of General Services"/>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #1D4C7C; width: 100%;">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="inventory.html">Inventory</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Chart Analysis <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="text-analysis.html">Text Analysis</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="questions/q1.html">New Score</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    
+    <main>
+      <div class="container" style="background-color: #EEF3F7;">
+        <div class="row">
+        <div class="col-12">
+        <div id="bargraph"></div>
+
+    <script type="text/javascript" charset="utf-8">
+
+    window.onload = function () {
+
+        /**
+         * set graph data
+         */
+        var data = ({series1data : new Array('33','33','17','33','33','27'),
+                     series2data : new Array('11','11','11','11','11','11'),
+                     series3data : new Array('22','9','22','2','22','22'),
+                     series4data : new Array('28','28','28','28','6','6')
+                    });
+
+        /**
+         * draw the graph
+         */
+        var graph = new JpGraph(
+                'stacked vertical bar',
+                'bargraph',
+                data,
+                {
+                  width                 : 500,
+                  height                : 500,
+                  backgroundColor       : '#f9f5da',
+                  series1               : "title: Public Services; color:#e94933; scale:left",
+                  series2               : "title: Internal Services; color:#008bd0; scale:left",
+                  series3               : "title: Accessibility Testing; color:#00a550; scale:left",
+                  series4               : "title: Life Span; color:#553499; scale:left",
+                  xLabels               : 'MyMedical 2.0|Project CALculate|MyCalTravel|iTracker Online|Construction Manager|DataShare Pub',
+                  xfontColor            : "#444",
+                  xopacity              : 1.0,
+                  xfontSize             : 12,
+                  xfontWeight           : "normal",
+                  xfontStyle            : "normal",
+                  xfontFamily           : "Helvetica, Arial, Verdana, sans-serif",
+                  xtextAnchor           : "end",
+                  xrotation             : 315,
+                  barWidth              : 38,
+                  barGap                : 20,
+                  displayValues         : false,
+                  title                 : "AEIS Inventory Analysis",
+                  titleFontSize         : "24px",
+                  titleFontWeight       : "normal",
+                  titleFontStyle        : "normal",
+                  titleFontFamily       : "Helvetica, Arial, Verdana, sans-serif",
+                  titleFontColor        : "#000",
+                  xTitle                : "",
+                  xTitleFontSize        : 16,
+                  xTitleFontWeight      : "normal",
+                  xTitleFontStyle       : "normal",
+                  xTitleFontFamily      : "Helvetica, Arial, Verdana, sans-serif",
+                  xTitleFontColor       : "#444",
+                  yTitle                : "",
+                  yTitleFontSize        : 16,
+                  yTitleFontWeight      : "normal",
+                  yTitleFontStyle       : "normal",
+                  yTitleFontFamily      : "Helvetica, Arial, Verdana, sans-serif",
+                  yTitleFontColor       : "#444",
+                  threeD                : true,
+                  depth                 : 15,
+                  animationTime         : 750,
+                  gridBackgroundColor   : "#dbd39a",
+                  gridBanding           : true,
+                  gridOpacity           : 1.0,
+                  gridBackgroundImage   : "",
+                  gridLineWidth         : 0.3,
+                  gridLineStyle         : ". ",
+                  gridAxisWidth         : 2,
+                  gridAxisStyle         : "- ",
+                  gridNRows             : 6,
+                  gridColSpacing        : 40,
+                  gridRowSpacing        : 50,
+                  gridxPos              : 75,
+                  gridyPos              : 400,
+                  xLabelPre             : "",
+                  xLabelPost            : "",
+                  yLabelColor           : "#777",
+                  yLabelPre             : "",
+                  yLabelPost            : "",
+                  x2LabelPre            : "",
+                  x2LabelPost           : "",
+                  y2LabelPre            : "",
+                  y2LabelPost           : "",
+                  ndecplaces            : 0,
+                  ndecplaces2           : 3,
+                  labelFontSize         : 11,
+                  labelFontWeight       : "lighter",
+                  labelFontStyle        : "normal",
+                  labelFontFamily       : "Helvetica, Arial, Verdana, sans-serif",
+                  labelFontColor        : "#f62",
+                  xrotation             : 315,
+                  legendXpos            : 650,
+                  legendYpos            : 20,
+                  legendPadding         : 6,
+                  legendRoundRadius     : 6,
+                  legendOpacity         : 0.7,
+                  legendBackground      : true,
+                  legendBackgoundColor  : '#ffffff',
+                  legendBorderColor     : '#888',
+                  legendBorderWidth     : 1,
+                  legendStyle           : 'vertical',
+                  legendTitle           : 'Products',
+                  legendTitleFontSize   : 14,
+                  legendTitleFontWeight : 'normal',
+                  legendTitleFontStyle  : 'normal',
+                  legendTitleFontFamily : 'Helvetica, Arial, Verdana, sans-serif',
+                  legendTitleFontColor  : '#000',
+                  legendFontSize        : 12,
+                  legendFontWeight      : 'normal',
+                  legendFontStyle       : 'normal',
+                  legendFontFamily      : 'Helvetica, Arial, Verdana, sans-serif',
+                  legendFontColor       : '#444'
+                });
+    }
+
+
+
+    </script>
+      </div>
+      </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container container"></div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
